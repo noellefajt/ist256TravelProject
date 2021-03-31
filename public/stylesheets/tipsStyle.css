@@ -9,6 +9,7 @@ h1 {
     font-size: 3em;
 }
 
+/* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020 */
 #nav ul {
     list-style-type: none;
     margin: 0;
@@ -17,10 +18,12 @@ h1 {
     background-color: #202729;
 }
   
+/* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020 */
 #nav li {
     float: left;
 }
   
+/* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020 */
 li a {
     display: block;
     color: white;
@@ -29,10 +32,12 @@ li a {
     text-decoration: none;
 }
   
+/* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020 */
 li a:hover:not(.active) {
     background-color: #111;
 }
   
+/* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020 */
 .active {
     background-color: #9CA1A1;
 }
