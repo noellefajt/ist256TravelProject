@@ -45,7 +45,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: #4A4E69;
 }
 
 /* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020 */
