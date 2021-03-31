@@ -46,3 +46,13 @@ li a:hover:not(.active) {
 .active {
     background-color: #9A8C98;
 }
+
+#tips ul{
+    list-style-type: none;
+    width: 1000px;
+}
+
+li img {
+    float: left;
+    margin: 0 15px 0 0;
+}
