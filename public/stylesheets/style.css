@@ -1,33 +1,39 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
 a {
   color: #00B7FF;
 }
 
 body {
-  margin: 30px;
-  background-color: #F2E9E4;
-  font-family: "Karla", sans-serif; 
-  color: #4A4E69;
+    margin: 35px;
+    background-color: #F2E9E4;
+    font-family: "Karla", sans-serif; 
+    color: #212133;
 }
 
 h1 {
-  font-size: 3em;
+    font-size: 3em;
 }
 
+.logo {
+    float: left;
+    padding-right: 15px;
+    max-height:45px;
+    width:auto;
+    position:static;
+}
+
+/* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020 */
 #nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #202729;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #212133;
 }
 
+/* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020 */
 #nav li {
-  float: left;
+    float: left;
 }
 
 li a {
@@ -39,9 +45,10 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: #4A4E69;
 }
 
+/* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020 */
 .active {
-  background-color: #9CA1A1;
+    background-color: #9A8C98;
 }
