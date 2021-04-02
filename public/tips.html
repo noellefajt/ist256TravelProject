@@ -2,10 +2,10 @@
 <html>
 <!-- Style guide is: https://www.w3schools.com/html/html5_syntax.asp -->
     <head>
-        <title>Travel Tips</title>
+        <title>Travel Advice</title>
         <meta charset="utf-8">
-        <meta name="description" content="Travel Tips Page">
-        <meta name="keywords" content="IST 256, Travel, Tips, Jennifer Hodsdon">
+        <meta name="description" content="Travel Advice Page">
+        <meta name="keywords" content="IST 256, Travel, Advice, Jennifer Hodsdon">
         <meta name="author" content="Jennifer Hodsdon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--<script src="scripts/scripts.js" defer></script>-->
@@ -32,57 +32,79 @@
 
         <div id="header">
             <h1>Travel Tips</h1>
-            <p>Here are some travel tips to stay safe while on your trip:</p>
+            <h4>Here are some travel tips to stay safe while on your trip:</h4>
         </div>
 
-        <div id="tips">
-            <!--Images adapted from: https://icons8.com/ Retreuved: 3/29-->
-            <ul>
-                <li id="tipPoints">
-                    <img src="images/lock1.png" alt="Lock graphic" style="max-height:150px;width:auto;position:static"> 
-                    <h3>Lock Up Your Valuables</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </li>
-                  
-                <li>
-                    <img src="images/emerg2.png" alt="Phone graphic" style="max-height:150px;width:auto;position:static">
-                    <h3>Know Emergency Information for the Area</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </li>
-            
-                <li>
-                    <img src="images/scam3.png" alt="Document graphic" style="max-height:150px;width:auto;position:static">
-                    <h3>Research Popular Scams</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </li>
-            
-                <li>
-                    <img src="images/friend4.png" alt="Email graphic" style="max-height:150px;width:auto;position:static">
-                    <h3>Share Your Plans with a Friend or Family Member</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </li>
+        <div class="gridContainer">
+            <!--Images adapted from: https://icons8.com/ Retreived: 3/29-->
+            <div class="gridItem">
+                <img class="gridPic" src="images/lock1.png" alt="Lock graphic" style="max-height:150px;width:auto;position:static"> 
+            </div>
+            <div class="gridItem">
+                <h3>Lock Up Your Valuables</h3>
+                <p>
+                    When traveling, you may want or need to bring valuable items with you. This could be your social security card, 
+                    birth certificate, or other sensitive documents. You may also be bringing various forms of money, as well as 
+                    other expensive items like cameras or laptops. While you are traveling you want to avoid theft. Ideally, this 
+                    would mean limiting the number of valuable items you bring, and only taking what is absolutely necessary. It 
+                    is important to lock up any items that you do decide to bring, most likely in a hotel safe or locker. Stay 
+                    vigilant to keep your items safe!
+                </p>
+            </div>
 
-                <li>
-                    <img src="images/wifi5.png" alt="Wifi graphic" style="max-height:150px;width:auto;position:static">
-                    <h3>Avoid Using Public Wifi</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </li>
-            </ul>
+            <div class="gridItem">
+                <img class="gridPic" src="images/emerg2.png" alt="Phone graphic" style="max-height:150px;width:auto;position:static">
+            </div>
+            <div class="gridItem">
+                <h3>Know Emergency Information for the Area</h3>
+                <p>
+                    It is crucial to know the contact information for local emergency services wherever you are visiting. While 911 
+                    is the emergency number throughout the United States, if you are traveling abroad, other countries have 
+                    different emergency phone numbers. Additionally, if you are calling for emergency services within the United 
+                    States, it is also important that you know the name of the area you are visiting, in order to effectively 
+                    communicate with the operators. You may also want to scan copies of important documents into a flash drive 
+                    that you bring, in case any of your documents get lost or stolen. Emergency preparedness is crucial!
+                </p>
+            </div>
+
+            <div class="gridItem">
+                <img class="gridPic" src="images/scam3.png" alt="Document graphic" style="max-height:150px;width:auto;position:static">
+            </div>
+            <div class="gridItem">
+                <h3>Research Popular Scams</h3>
+                <p>
+                    In popular tourist areas, scams are relatively common. The best way to protect yourself from scammers is to 
+                    research popular scams in the area before you visit. Simply reaching out to others who have visited the city 
+                    or using a Google search can help you defend yourself from scams before you even arrive. 
+                </p>
+            </div>
+
+            <div class="gridItem">
+                <img class="gridPic" src="images/friend4.png" alt="Email graphic" style="max-height:150px;width:auto;position:static">
+            </div>
+            <div class="gridItem">
+                <h3>Share Your Plans with a Friend or Family Member</h3>
+                <p>
+                    When making travel plans it is always smart to share them with someone you trust--either a friend or family 
+                    member. If you plan to have a detailed itinerary, email or text it to that person. If you don’t have an 
+                    absolute travel plan, simply checking in with that person regularly is good as well. This ensures that 
+                    someone knows where you should be in case of an emergency in the area you are visiting, so they can contact 
+                    the proper authorities. Informing someone of your plans will also enable them to make sure you return when 
+                    planned. This will keep you safe!
+                </p>
+            </div>
+
+            <div class="gridItem">
+                <img class="gridPic" src="images/wifi5.png" alt="Wifi graphic" style="max-height:150px;width:auto;position:static">
+            </div>
+            <div class="gridItem">
+                <h3>Avoid Using Public Wifi</h3>
+                <p>
+                    Public WiFi, although convenient, can be very risky to use. It is much easier for hackers to steal important 
+                    information, such as bank and credit card information, when using public WiFi. If you must use public WiFi 
+                    on your trip, look into using a virtual private network (VPN) to securely use the Internet. 
+                </p>
+            </div>
         </div>
 
     </body>

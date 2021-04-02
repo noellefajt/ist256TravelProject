@@ -15,7 +15,16 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+    font-size: 3em;
+}
+
+.logo {
+  /*float: left;*/
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
 }
 
 #nav ul {
@@ -34,7 +43,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 16px;
   text-decoration: none;
 }
 
