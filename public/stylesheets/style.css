@@ -32,7 +32,7 @@ h1 {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #202729;
+  background-color: #212133;
 }
 
 #nav li {
@@ -48,9 +48,9 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: #4A4E69;
 }
 
 .active {
-  background-color: #9CA1A1;
+  background-color: #9A8C98;
 }
