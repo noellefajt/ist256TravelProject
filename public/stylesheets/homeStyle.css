@@ -156,4 +156,11 @@ li a:hover:not(.active) {
     transform: scaleX(-1);
 }
 
+
+
+/*Footer*/
+.footer{
+    text-align: center;
+}
+
 /*All images found form unsplash.com free for commercial and personal use*/
