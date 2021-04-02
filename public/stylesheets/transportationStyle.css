@@ -6,11 +6,11 @@ h1{
 }
 
 
-/*all button styling adapted from:https://www.w3schools.com/howto/howto_css_search_button.asp*/
+/*all button styling adapted from:https://www.w3schools.com/howto/howto_css_search_button.asp
 
 * {
   box-sizing: border-box;
-}
+}*/
 
 
 form.searchBar input[type=text] {
