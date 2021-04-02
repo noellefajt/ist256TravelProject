@@ -1,19 +1,10 @@
-a{
-    color: rgb(177, 159, 159);
-}
-a:hover{
-    color: #4A4E69;
-}
+
 #coding-image{
     border-radius: 8px;
     width: 500px;
-    align: "right";
+    
 }
-#airplane-image{
-    border-radius: 8px;
-    width: 250px;
-    align: "right";
-}
+
 .gridContainer {
     display: grid;
     grid-template-columns: auto auto;
@@ -23,4 +14,13 @@ a:hover{
 
 #devs{
     margin: 0px;
+}
+
+#emailID{
+    color:  #4A4E69;
+    ; 
+}
+
+#emailID:hover{
+    color: rgb(177, 159, 159);
 }
