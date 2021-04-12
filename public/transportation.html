@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Transportation</title>
-        <link rel="stylesheet" href="stylesheets/transportationStyle.css">
-        <link rel="stylesheet" href="stylesheets/style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    </head>
+<head>
+    <title>Transportation</title>
+    <link rel="stylesheet" href="stylesheets/transportationStyle.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="routes/transportation.js" defer></script>
 
-    <body>
-        <div id="nav">
-            <!--Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020-->
-            <ul>
-                <li><img class="logo" src="images/whiteLogo.png" alt="Travelscape Logo" style="max-height:45px;width:auto;position:static"></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a class="active" href="transportation.html">Transportation</a></li>
-                <li><a href="lodging.html">Lodging</a></li>
-                <li><a href="activity.html">Activity Planning</a></li>
-                <li><a href="tips.html">Travel Advice</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
-        </div>
+</head>
 
-        <div id= "instructions">
-            <h1 >Transportation </h1>
-            <img id ="transportationImage" src="images/transportation-icon.png" alt ="public transportation">
-            <p>Use the search bar to find a way to travel to your destination.</p>
-        </div>
-        <!--  adapted from: https://www.w3schools.com/howto/howto_css_search_button.asp -->
-        <!--Users will search their location and this will return travel information about it from the API and this will be set up in later sprints-->
-        <form class="searchBar" action="tips.html">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
+<body>
+    <div id="nav">
+        <!--Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020-->
+        <ul>
+            <li><img class="logo" src="images/whiteLogo.png" alt="Travelscape Logo"
+                    style="max-height:45px;width:auto;position:static"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="transportation.html">Transportation</a></li>
+            <li><a href="lodging.html">Lodging</a></li>
+            <li><a href="activity.html">Activity Planning</a></li>
+            <li><a href="tips.html">Travel Advice</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
 
-    </body>
+    <div id="instructions">
+        <h1>Transportation </h1>
+        <img id="transportationImage" src="images/transportation-icon.png" alt="public transportation">
+        <p>Use the search bar to find a way to travel to your destination.</p>
+    </div>
+    <!--  adapted from: https://www.w3schools.com/howto/howto_css_search_button.asp -->
+    <!--Users will search their location and this will return travel information about it from the API and this will be set up in later sprints-->
+    <form class="searchBar" action="tips.html">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+</body>
 
 </html>
