@@ -2,14 +2,14 @@ function openTab(pageName, elmnt, color) {
     // Hide all elements with class="tabcontent" by default */
     var i, contenttabs, linktabs;
     tabcontent = document.getElementsByClassName("contenttabs");
-    for (i = 0; i < contenttabs.length; i++) {
-      contenttabs[i].style.display = "none";
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
     }
   
     // Remove the background color of all tablinks/buttons
-    linktabs = document.getElementsByClassName("linktabs");
-    for (i = 0; i < linktabs.length; i++) {
-      linktabs[i].style.backgroundColor = "";
+    linktab = document.getElementsByClassName("linktabs");
+    for (i = 0; i < linktab.length; i++) {
+      linktab[i].style.backgroundColor = "";
     }
   
     // Show the specific tab content
@@ -20,4 +20,4 @@ function openTab(pageName, elmnt, color) {
   }
   
   // Get the element with id="defaultOpen" and click on it
-  //document.getElementById("defaultOpen").click();
+    document.getElementById("defaultOpen").click();
