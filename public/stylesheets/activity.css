@@ -1,8 +1,3 @@
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
-}
 
 
 
@@ -20,7 +15,7 @@ body, html {
   }
   
   .linktabs:hover {
-    background-color: rgb(251, 255, 0);
+    background-color: rgb(53, 53, 51);
   }
   
   /* Style the tab content (and add height:100% for full page content) */
@@ -31,10 +26,6 @@ body, html {
     height: 100%;
   }
   
-  #toDo {
-    background-color:#4A4E69;
-    
-  }
-
+  #toDo { background-color:#212133; }
   #food {background-color: #9A8C98;}
-  #weather {background-color: #F2E9E4;}
+  #weather {background-color: #4A4E69;}

@@ -10,6 +10,8 @@ var reservationsRouter = require('.routes/reservations');
 
 var weatherRouter = require('./routes/weather');
 
+var activityRouter = require('./routes/activity');
+
 var app = express();
 
 app.use(logger('dev'));
@@ -27,5 +29,7 @@ app.use('/users', usersRouter);
 app.use('/reservations', reservationsRouter);
 
 app.use('/weather', weatherRouter);
+
+app.use('/activity', activityRouter);
 
 module.exports = app;
