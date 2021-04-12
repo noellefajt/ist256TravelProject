@@ -8,9 +8,9 @@
         <meta name="keywords" content="IST 256, Travel, Advice, Jennifer Hodsdon">
         <meta name="author" content="Jennifer Hodsdon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<script src="scripts/scripts.js" defer></script>-->
         <link rel="stylesheet" type="text/css" href="stylesheets/tipsStyle.css">
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <script src="scripts/tips.js" defer></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
     </head>
@@ -104,6 +104,69 @@
                     information, such as bank and credit card information, when using public WiFi. If you must use public WiFi 
                     on your trip, look into using a virtual private network (VPN) to securely use the Internet. 
                 </p>
+            </div>
+        </div>
+
+        <div id="covid">
+            <h1>COVID-19 Updates</h1>
+            <div id="covidUpdates">
+            <!--Adapted from: https://codepen.io/_yatko/pen/RwWRNrW/ retrieved: 4/11/2021--> 
+            <!--API from: https://github.com/Yatko/Coronavirus-API retrieved: 4/11/2021-->    
+                <h2>Coronavirus Cases in <span data-var-placeholder="country"></span></h2>
+                <p>LIVE UPDATE</p>
+                <div id="data">
+					<!--total cases-->
+                    <div>
+                        <button class="btn btn-danger fixwidth">
+                            <strong data-country-placeholder="total_cases">0</strong>
+                        </button>
+                    </div>
+                    
+                    <div>
+                        <span class="text-muted small">Confirmed cases in the <span data-var-placeholder="country"></span>
+                    </div>
+
+                    <hr />
+
+                    <!--active-->
+                    <div>
+                        <button class="btn btn-warning fixwidth">
+                            <strong><span data-country-placeholder="active_cases">0</span></strong>
+                        </button>  
+                    </div>
+
+                    <div>
+                        <span class="text-muted small">Active cases in the <span data-var-placeholder="country"></span></span>
+                    </div>
+                                
+                    <hr />
+                                
+                    <!--recovered-->
+                                
+                    <div class="d-inline qc_data-cases qc_data-cases-all">
+                        <button class="btn btn-success fixwidth">
+                            <strong data-country-placeholder="recovered">0</strong>
+                        </button>
+                    </div>
+                                
+                    <div class="d-inline qc_data-cases qc_data-cases-text pl-1 pl-sm-2">
+                        <span class="text-muted small">Recoveding cases in the <span data-var-placeholder="country"></span></span>
+                    </div>
+                                
+                    <hr />
+                                
+                    <!--deaths-->
+                    <div class="d-inline qc_data-cases qc_data-cases-all">
+                        <button class="btn btn-secondary fixwidth">
+                            <strong><span data-country-placeholder="deaths">0</span></strong>
+                        </button>
+                    </div>
+                                
+                    <div class="d-inline qc_data-cases qc_data-cases-text pl-1 pl-sm-2">
+                        <span class="text-muted small">Death cases in the <span data-var-placeholder="country"></span>
+                    </div>
+						
+                </div>
             </div>
         </div>
 

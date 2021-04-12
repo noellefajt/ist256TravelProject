@@ -66,9 +66,13 @@ li a:hover:not(.active) {
 .gridContainer {
     display: grid;
     grid-template-columns: auto auto;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 .gridItem {
     padding: 20px;
+}
+
+.fixwidth {
+    min-width: 10rem;
 }
