@@ -8,7 +8,7 @@ var usersRouter = require('./routes/users');
 
 //var reservationsRouter = require('./routes/reservations');
 
-var weatherRouter = require('./routes/location');
+var locationRouter = require('./routes/location');
 
 var app = express();
 
@@ -26,6 +26,6 @@ app.use('/users', usersRouter);
 
 //app.use('/reservations', reservationsRouter);
 
-app.use('/location', weatherRouter);
+app.use('/location', locationRouter);
 
 module.exports = app;
