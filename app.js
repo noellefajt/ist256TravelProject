@@ -31,6 +31,8 @@ app.use('/activity', activityRouter)
 
 app.use('/location', locationRouter);
 
+//app.use('/reservations',reservationsRouter);
+
 
 module.exports = app;
 

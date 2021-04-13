@@ -18,7 +18,7 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
             crossorigin="anonymous">
         </script>
-        <script src="scripts/activityTabsHandler.js" defer></script>*/
+        <script src="scripts/activityTabsHandler.js" defer></script>
         <script src="scripts/script.js" ></script>
         
 
@@ -32,31 +32,26 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="transportation.html">Transportation</a></li>
-                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="lodging.html">Reservation</a></li>
                 <li><a class="active" href="activity.html">Activity Planning</a></li>
                 <li><a href="tips.html">Travel Advice</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
         </div>
 
-        
-        
-        
-        
-        
         <div id="header">
             <h1>Activity Planning</h1>
             <br>
         </div>
 
-        <button class="linktabs" onclick="openTab('toDo', this, '#4a4e6950')">Things to Do</button>
-        <button class="linktabs" onclick="openTab('food', this, '#9A8C98')" id="defaultOpen">Food and Drink</button>
+        <button class="linktabs" onclick="openTab('toDo', this, '#4a4e6950')"id="defaultOpen">Things to Do</button>
+        <button class="linktabs" onclick="openTab('food', this, '#9A8C98')" >Food and Drink</button>
         <button class="linktabs" onclick="openTab('weather', this, '#6a719e')">Weather</button>
 
         <div id="toDo" class="contenttabs">
             <h2>Things to Do</h2>
             <!--This page will be implemented with an API. This is just a wireframe-->
-            <p>This is where the activity information will be. This page will be implemented with an API.</p>
+            <p>This page will implement the BLC Landmark API in the next sprint.</p>
         </div>
         <div id="food" class="contenttabs">
             <h2>Food and Drinks</h2>
@@ -65,8 +60,11 @@
         </div>
         <div id="weather" class="contenttabs">
             <h2>Weather</h2>
-            <!--This page will be implemented with an API. This is just a wireframe-->
-            <p>This is where the weather information will be. This page will be implemented with an API.</p>
+            <div id="weather">
+                <h1>6-Day Weather Forecast</h1>
+                <h2>Boston, MA</h2>
+                <div id="content">
+            </div>
         </div>
     </body>
 </html>
