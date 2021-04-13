@@ -1,13 +1,20 @@
+#toDo { 
+  background-color: #4a4e6950; 
+}
 
+#food {
+  background-color: #9A8C98;
+}
 
-
-/* Style tab links */
+#weather {
+  background-color: #6a719e;
+}
 .linktabs {
     float: center;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 17px 20px;
     font-size: 17px;
     width: 25%;
     font-family: "Karla", sans-serif; 
@@ -18,20 +25,24 @@
     background-color: rgb(53, 53, 51);
   }
   
-  /* Style the tab content (and add height:100% for full page content) */
+
   .contenttabs {
     background-color: #555;
     color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
     width: 100%;
     height: max-content;
   }
   
-  #toDo { background-color: #4a4e6950; }
-  #food {background-color: #9A8C98;}
-  #weather {background-color: #6a719e;}
+  #toDo { 
+    background-color: #4a4e6950; 
+  }
+
+  #food {
+    background-color: #9A8C98;
+  }
+
+  #weather {
+    background-color: #6a719e;
+  }
