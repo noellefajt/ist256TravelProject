@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<!-- Style guide is: https://www.w3schools.com/html/html5_syntax.asp -->
+    <head>
+        <title>Weather API</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Travel Advice Page">
+        <meta name="keywords" content="IST 256, Travel, Advice, Jennifer Hodsdon">
+        <meta name="author" content="Jennifer Hodsdon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <script 
+            src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+        </script>
+        <script src="scripts/weatherScript.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div id="nav">
+            <!--Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020-->
+            <ul>
+                <li><img class="logo" src="images/whiteLogo.png" alt="Travelscape Logo" style="max-height:45px;width:auto;position:static"></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="activity.html">Activity Planning</a></li>
+                <li><a class="active" href="tips.html">Travel Advice</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+        </div>
+        <!--boston woeid = 2367105 -->
+        <div id="weather">
+            <h1>Weather Forecast</h1>
+            <h2>Boston, MA</h2>
+            <div id="bostonWeather">
+
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
+
+
+

@@ -1,5 +1,4 @@
 body {
-    margin: 30px;
     background-color: #F2E9E4;
     font-family: "Karla", sans-serif; 
     color: #212133;
@@ -67,9 +66,13 @@ li a:hover:not(.active) {
 .gridContainer {
     display: grid;
     grid-template-columns: auto auto;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 .gridItem {
     padding: 20px;
+}
+
+.fixwidth {
+    min-width: 10rem;
 }
