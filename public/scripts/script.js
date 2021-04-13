@@ -62,6 +62,27 @@ function displayData(info){
     });
 }            
 
+function addRes()
+{
+    
+    console.log("Reservation created!");
+}
+
+function updateRes()
+{
+    console.log("Reservation updated!");
+}
+
+function findRes()
+{
+    console.log("Reservation found!");
+}
+
+function deleteRes()
+{
+    console.log("Reservation deleted!");
+}
+
 
 
         
