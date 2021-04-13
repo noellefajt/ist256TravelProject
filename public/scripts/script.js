@@ -1,7 +1,20 @@
 $(document).ready(function(){
-    //console.log("Ready!");
-    makeRequest();
+
+    console.log("Ready!");
+    makeVinceRequest();
+    makeJenRequest();
 });
+
+function makeVinceRequest(){
+    $.ajax({
+        method:'GET',
+        url:'/activity',
+        success: (data) => {
+            console.log(data);
+        }
+    });
+}
+
 
 /*
 function makeRequest(){
@@ -14,7 +27,7 @@ function makeRequest(){
     });
 }*/
 
-function makeRequest(){
+function makeJenRequest(){
     $.ajax({
         method:'GET',
         url:'/location',
@@ -62,3 +75,4 @@ function displayData(info){
 
         content.append(ul);
     */   
+
