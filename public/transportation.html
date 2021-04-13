@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="routes/transportation.js" defer></script>
-    <script src="scripts/transpoScript.js" defer></script>
+
+    <script src="scripts/transportation.js" defer></script>
 </head>
 <div id="nav">
     <!--Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active Retrieved: 3/29/2020-->
@@ -28,20 +28,17 @@
 
 <div id="instructions">
     <h1>Transportation </h1>
-    <img id="transportationImage" src="images/transportation-icon.png" alt="public transportation">
-    <p>Use the search bar to find a way to travel to your destination.</p>
 </div>
-<!--  adapted from: https://www.w3schools.com/howto/howto_css_search_button.asp -->
-<!--Users will search their location and this will return travel information about it from the API and this will be set up in later sprints-->
-<form class="searchBar" action="">
-    <input type="text" placeholder="Search.." name="search">
-    <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-    <br>
-    <button id = "button"> click me!</button>
-    <br>
-    <p id ="message"></p>
 
+<!--Add map of boston things -->
+<div class="btn-panel">
+    <button id="greenButton">Green Line</button>
+    <button id="orangeButton">Orange Line</button>
+    <button id="blueButton">Blue Line</button>
+    <button id="redButton">Red Line</button>
+    <div id="lineData"></div>
+    <div id="linePhoto"></div>
+</div>
 </body>
 
 </html>

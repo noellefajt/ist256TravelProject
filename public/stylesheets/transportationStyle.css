@@ -4,48 +4,59 @@ h1{
 }
 
 
-/*all button styling adapted from:https://www.w3schools.com/howto/howto_css_search_button.asp
-
-* {
-  box-sizing: border-box;
-}*/
-
-
-form.searchBar input[type=text] {
-  padding: 8px;
-  font-size: 15px;
-  border: 2px solid #212133;
-  float: left;
-  width: 400;
-  background: #e1e1e4;
-  border-radius: 3px;
+/*all button styling adapted from:https://www.w3schools.com/howto/howto_css_search_button.asp*/
+.btn-panel button {
+  margin: 10px;
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  border-radius: 5px ;
 }
 
 
-form.searchBar button {
-  float: left;
-  width: 5%;
-  padding: 9.5px;
-  background: #212133;
+#greenButton {
+  background-color: #5ed362; /* Green */
+  border: none;
   color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; 
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-form.searchBar button:hover {
-  background: #9A8C98;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 
-form.searchBar::after {
-  content: "";
-  clear: both;
-  display: table;
+#blueButton {
+  background-color: #4390cf; /* blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
-/* end of button styling VIA w3Schools*/
+#orangeButton {
+  background-color: #e4a32a; /* orange */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#redButton {
+  background-color: #e7453f; /* red */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 
 #transportationImage {
     max-height:150px;
@@ -54,3 +65,4 @@ form.searchBar::after {
     float: left;
     margin: 0 15px 0 0;
 }
+
