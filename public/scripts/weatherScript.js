@@ -6,7 +6,7 @@ $(document).ready(function(){
 function makeRequest(){
     $.ajax({
         method:'GET',
-        url:'/location',
+        url:'/weather',
         success: (data) => {
             console.log(data);
         }

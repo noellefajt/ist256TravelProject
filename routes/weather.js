@@ -6,8 +6,8 @@ router.get('/', function(req, res, next) {
     
     axios.get('https://www.metaweather.com/api/location/2367105/').then(function(response){
         res.send(response.data);
-        console.log(response);
-        console.log(response.data);
+        //console.log(response);
+        //console.log(response.data);
     });
 });
 
