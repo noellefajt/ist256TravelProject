@@ -10,8 +10,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--<script src="scripts/scripts.js" defer></script>-->
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/activity.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
+        <script 
+            src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+        </script>
+        <script src="scripts/activityTabsHandler.js" defer></script>*/
+        <script src="scripts/script.js" ></script>
+        
+
     </head>
 
     <body>
@@ -29,24 +39,31 @@
               </ul>
         </div>
 
+        
+        
+        
+        
+        
         <div id="header">
             <h1>Activity Planning</h1>
-            <!--This page will be implemented with an API. This is just a wireframe-->
-            <p>This page will be implemented with an API. This is just a wireframe</p>
             <br>
         </div>
 
-        <div id="toDo">
+        <button class="linktabs" onclick="openTab('toDo', this, '#4a4e6950')">Things to Do</button>
+        <button class="linktabs" onclick="openTab('food', this, '#9A8C98')" id="defaultOpen">Food and Drink</button>
+        <button class="linktabs" onclick="openTab('weather', this, '#6a719e')">Weather</button>
+
+        <div id="toDo" class="contenttabs">
             <h2>Things to Do</h2>
             <!--This page will be implemented with an API. This is just a wireframe-->
             <p>This is where the activity information will be. This page will be implemented with an API.</p>
         </div>
-        <div id="food">
+        <div id="food" class="contenttabs">
             <h2>Food and Drinks</h2>
             <!--This page will be implemented with an API. This is just a wireframe-->
             <p>This is where the food and drink information will be. This page will be implemented with an API.</p>
         </div>
-        <div id="weather">
+        <div id="weather" class="contenttabs">
             <h2>Weather</h2>
             <!--This page will be implemented with an API. This is just a wireframe-->
             <p>This is where the weather information will be. This page will be implemented with an API.</p>

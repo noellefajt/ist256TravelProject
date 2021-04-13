@@ -79,7 +79,7 @@ li a:hover:not(.active) {
 
 
 /*All the images*/
-#pittsburgh-image{
+#arlington-image{
     display: grid;
     border-radius: 8px;
     height: 103.25px;
@@ -87,7 +87,7 @@ li a:hover:not(.active) {
     float: left;
 }
 
-#philadelphia-image{
+#jamesblake-image{
     border-radius: 8px;
     height: 104.5px;
     width: 156.75px;
@@ -99,28 +99,28 @@ li a:hover:not(.active) {
     
 }
 
-#oceancity-image{
+#trustcomp-image{
     border-radius: 8px;
-    height: 100px;
-    width: 150px;
+    height: 105px;
+    width: 160px;
 
 }
 
-#boston-image{
+#theodore-image{
     border-radius: 8px;
     height: 118.5px;
     width: 151.5px;
 
 }
 
-#newyorkcity-image{
+#trinity-image{
     border-radius: 8px;
     height: 120px;
     width: 150px;
 
 }
 
-#hershey-image{
+#proctor-image{
     border-radius: 8px;
     height: 120px;
     width: 160px;
