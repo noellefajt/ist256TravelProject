@@ -7,7 +7,7 @@ $(document).ready(function(){
 function makeRequest(){
     $.ajax({
         method:'GET',
-        url:'/location',
+        url:'/reservations',
         success: function(data) {    
             console.log(data);
         }
@@ -36,6 +36,9 @@ function displayData(info){
         content.append(h1);
     });
 }            
+
+
+
         
     /*
             let h3 = $(`<h3>${"Height: " + item.height_feet + " feet " + item.height_inches + " inches"}</h3>`);
