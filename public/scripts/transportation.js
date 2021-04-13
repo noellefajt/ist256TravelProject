@@ -1,3 +1,5 @@
+//code adjusted from JSON inclass practice 
+
 const data = {
     "subwayData": {
         "greenLine": [
@@ -119,10 +121,11 @@ const data = {
 }
 //fucntion handles a green button click 
 function greenClick() {
+    
     let greenData = document.getElementById("lineData");
     greenData.innerHTML = null;
     data.subwayData.greenLine.forEach(stop => {
-        let p = document.createElement("p");
+        let p = document.createElement("p")
         let pText = document.createTextNode(stop.stopName);
         p.appendChild(pText);
         greenData.appendChild(p);
