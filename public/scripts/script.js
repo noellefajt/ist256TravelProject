@@ -1,13 +1,13 @@
 $(document).ready(function(){
-    console.log("Ready!");
+    //console.log("Ready!");
     makeRequest();
 });
 
 function makeRequest(){
     $.ajax({
         method:'GET',
-        url:'/weather',
-        success: (data) => {
+        url:'/location',
+        success: function(data) {    
             console.log(data);
         }
     });
