@@ -13,7 +13,15 @@
         <link rel="stylesheet" type="text/css" href="stylesheets/activity.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
-        <script src="scripts/activity.js" defer></script>
+        <script 
+            src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+        </script>
+        <script src="scripts/activityTabsHandler.js" defer></script>*/
+        <script src="scripts/script.js" ></script>
+        
+
     </head>
 
     <body>
@@ -41,9 +49,9 @@
             <br>
         </div>
 
-        <button class="linktabs" onclick="openTab('toDo', this, '#212133')">Things to Do</button>
+        <button class="linktabs" onclick="openTab('toDo', this, '#4a4e6950')">Things to Do</button>
         <button class="linktabs" onclick="openTab('food', this, '#9A8C98')" id="defaultOpen">Food and Drink</button>
-        <button class="linktabs" onclick="openTab('weather', this, '#4A4E69')">Weather</button>
+        <button class="linktabs" onclick="openTab('weather', this, '#6a719e')">Weather</button>
 
         <div id="toDo" class="contenttabs">
             <h2>Things to Do</h2>
