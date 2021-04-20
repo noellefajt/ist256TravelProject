@@ -7,7 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 
-//var reservationsRouter = require('./routes/reservations');
+var reservationsRouter = require('./routes/reservations');
 var activityRouter = require('./routes/activity');
 
 
@@ -31,7 +31,7 @@ app.use('/activity', activityRouter)
 
 app.use('/location', locationRouter);
 
-//app.use('/reservations',reservationsRouter);
+app.use('/reservations',reservationsRouter);
 
 
 module.exports = app;
