@@ -15,19 +15,19 @@ const data = {
                     "11:01pm"
                 ]
             },
-             {
+            {
                 "stopName": "Arlington",
                 "time": [
                     "11:03pm"
                 ]
             },
-             {
+            {
                 "stopName": "Copley",
                 "time": [
                     "11:04pm"
                 ]
             },
-             {
+            {
                 "stopName": "Hynes Convention Center",
                 "time": [
                     "11:06pm"
@@ -36,7 +36,7 @@ const data = {
         ],
 
         "orangeLine": [
-             {
+            {
                 "stopName": "North Station",
                 "time": [
                     "11:00pm"
@@ -48,13 +48,13 @@ const data = {
                     "11:06pm"
                 ]
             },
-             {
+            {
                 "stopName": "State",
                 "time": [
                     "11:12pm"
                 ]
             },
-             {
+            {
                 "stopName": "Downtown Crossing",
                 "time": [
                     "11:18pm"
@@ -69,19 +69,19 @@ const data = {
                     "11:00pm"
                 ]
             },
-             {
+            {
                 "stopName": "Aquarium",
                 "time": [
                     "11:05pm"
                 ]
             },
-             {
+            {
                 "stopName": "State",
                 "time": [
                     "11:10pm"
                 ]
             },
-             {
+            {
                 "stopName": "Government Center",
                 "time": [
                     "11:15pm"
@@ -90,25 +90,25 @@ const data = {
         ],
 
         "redLine": [
-           {
+            {
                 "stopName": "Charles",
                 "time": [
                     "11:00pm"
                 ]
             },
-             {
+            {
                 "stopName": "Park Street",
                 "time": [
                     "11:09pm"
                 ]
             },
-             {
+            {
                 "stopName": "Downtown Crossing",
                 "time": [
                     "11:18pm"
                 ]
             },
-             {
+            {
                 "stopName": "South Station",
                 "time": [
                     "11:27pm"
@@ -121,26 +121,35 @@ const data = {
 }
 //fucntion handles a green button click 
 function greenClick() {
-    
-    let greenData = document.getElementById("lineData");
-    greenData.innerHTML = null;
+
+    let greenStop = document.getElementById("lineStop");
+    let greenTime = document.getElementById("lineTime");
+    let greenImg = document.getElementById("linePhoto");
+    greenStop.innerHTML = null;
+    greenTime.innerHTML = null;
+    greenImg.innerHTML = null;
+
     data.subwayData.greenLine.forEach(stop => {
+        //prints out stop name 
         let p = document.createElement("p")
         let pText = document.createTextNode(stop.stopName);
         p.appendChild(pText);
-        greenData.appendChild(p);
+        greenStop.appendChild(p);
+
+        //prints out stop time
+        let t = document.createElement("p");
+        let tText = document.createTextNode(stop.time);
+        t.appendChild(tText);
+        greenTime.appendChild(t);
     })
-      data.subwayData.greenLine.forEach(stop => {
-        let p = document.createElement("p");
-        let pText = document.createTextNode(stop.time);
-        p.appendChild(pText);
-        greenData.appendChild(p);
-    })
+
+
     let img = document.createElement("img");
     img.src = "images/subwaylinegreen.png";
-    greenData.appendChild(img);
+    greenImg.appendChild(img);
 }
 document.getElementById("greenButton").addEventListener("click", greenClick);
+
 
 //function handles orange button clicks  
 function orangeClick() {
@@ -151,13 +160,14 @@ function orangeClick() {
         let pText = document.createTextNode(stop.stopName);
         p.appendChild(pText);
         orangeData.appendChild(p);
+
+        //prints out stop time
+        let t = document.createElement("t");
+        let tText = document.createTextNode(stop.time);
+        t.appendChild(tText);
+        orangeData.appendChild(t);
     })
-    data.subwayData.orangeLine.forEach(stop => {
-        let p = document.createElement("p");
-        let pText = document.createTextNode(stop.time);
-        p.appendChild(pText);
-        orangeData.appendChild(p);
-    })
+
     let img = document.createElement("img");
     img.src = "images/subwaylineorange.png";
     orangeData.appendChild(img);
@@ -173,13 +183,14 @@ function blueClick() {
         let pText = document.createTextNode(stop.stopName);
         p.appendChild(pText);
         blueData.appendChild(p);
+
+        //prints out stop time
+        let t = document.createElement("t");
+        let tText = document.createTextNode(stop.time);
+        t.appendChild(tText);
+        blueData.appendChild(t);
     })
-    data.subwayData.blueLine.forEach(stop => {
-        let p = document.createElement("p");
-        let pText = document.createTextNode(stop.time);
-        p.appendChild(pText);
-        blueData.appendChild(p);
-    })
+
     let img = document.createElement("img");
     img.src = "images/subwaylineblue.png";
     blueData.appendChild(img);
@@ -195,13 +206,14 @@ function redClick() {
         let pText = document.createTextNode(stop.stopName);
         p.appendChild(pText);
         redData.appendChild(p);
+
+        //prints out stop time
+        let t = document.createElement("t");
+        let tText = document.createTextNode(stop.time);
+        t.appendChild(tText);
+        redData.appendChild(t);
     })
-    data.subwayData.redLine.forEach(stop => {
-        let p = document.createElement("p");
-        let pText = document.createTextNode(stop.time);
-        p.appendChild(pText);
-        redData.appendChild(p);
-    })
+
     let img = document.createElement("img");
     img.src = "images/subwayMapRed.png";
     redData.appendChild(img);

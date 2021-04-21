@@ -1,7 +1,4 @@
 
-h1{
-    margin-left: 15px;
-}
 
 
 /*all button styling adapted from:https://www.w3schools.com/howto/howto_css_search_button.asp*/
@@ -63,6 +60,13 @@ h1{
     width:auto;
     position:static;
     float: left;
-    margin: 0 15px 0 0;
+    margin: 10px  15px 0 0;
 }
+  
+
+
+#linePhoto{
+  margin-left: 15px;
+}
+
 
