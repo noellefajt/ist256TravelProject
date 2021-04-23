@@ -2,9 +2,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var bodyParser = require("body-parser");
+
 
 //copied from zybooks table 11.8.7
-const reservation = require("./models/reservationModel");
+var reservation = require("./models/reservationModel");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -27,6 +29,9 @@ app.use(cookieParser());
 
 //app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public'),{extensions: 'html'}));
+//app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: false })); // support encoded bodies
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

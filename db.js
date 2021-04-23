@@ -8,7 +8,7 @@
 // module.exports = mongoose;
 
 //copied from class video
-const mongoose = require("mongoose");
+var mongoose = require("mongoose");
 
 //connection string
 mongoose.connect("mongodb+srv://travelProject256:Apple123@cluster0.5jzjt.mongodb.net/mydb?retryWrites=true&w=majority", {

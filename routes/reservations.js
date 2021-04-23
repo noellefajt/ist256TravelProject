@@ -2,7 +2,7 @@ var axios = require('axios').default;
 var express = require('express');
 var router = express.Router();
 const resCntl = require("../controllers/reservationController.js");
-const reservation = require("../model/reservationModel.js");
+const reservation = require("../models/reservationModel.js");
 
 //get/retrieve the reservation information based on the reservation name the user searches
 router.get('/', function (req, res, next) {

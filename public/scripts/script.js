@@ -87,13 +87,13 @@ function addRes()
 
     $.ajax({
         method:'POST',
-        url:'/createRes',
+        url:'/reservations/createRes',
         success: function(data) {    
             console.log(data);
         }
     }).done(function(response){
         console.log(response);
-        displayData(response);
+        //displayData(response);
     });
 }
 
