@@ -27,7 +27,7 @@ const data = {
                     "11:04pm"
                 ]
             },
-            
+
         ],
 
         "orangeLine": [
@@ -115,9 +115,6 @@ const data = {
     }
 }
 
-
-
-
 //fucntion handles a green button click 
 function greenClick() {
     document.getElementById("table")
@@ -144,7 +141,6 @@ function greenClick() {
         greenTime.appendChild(t);
     })
 
-
     let img = document.createElement("img");
     img.src = "images/subwaylinegreen.png";
     greenImg.appendChild(img);
@@ -159,6 +155,7 @@ function orangeClick() {
     orangeStop.innerHTML = null;
     orangeTime.innerHTML = null;
     orangeImg.innerHTML = null;
+
 
     data.subwayData.orangeLine.forEach(stop => {
         let p = document.createElement("p");
@@ -213,7 +210,7 @@ document.getElementById("blueButton").addEventListener("click", blueClick);
 
 //function handles red button click 
 function redClick() {
-   let redStop = document.getElementById("lineStop");
+    let redStop = document.getElementById("lineStop");
     let redTime = document.getElementById("lineTime");
     let redImg = document.getElementById("linePhoto");
     redStop.innerHTML = null;
