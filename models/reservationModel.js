@@ -1,6 +1,6 @@
-// //copied from class video
-// const { model } = require("mongoose");
-// const mongoose = require("../db");
+//copied from class video
+const { model } = require("mongoose");
+//const mongoose = require("../db");
 
 // const ResSchema = new mongoose.Schema(
 //     {
@@ -26,7 +26,7 @@ const Reservation = db.model("Reservation", {
     fname:      String,
     lname:      String,
     date:       { type: Date, default: Date.now },
-    //time: { type: time },
+    time: String,
     activity: String
 });
 
