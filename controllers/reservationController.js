@@ -1,4 +1,4 @@
-const Reservation = require(".../models/reservationModel");
+const Reservation = require("../models/reservationModel");
 
 exports.create = (req, res) => {
     console.log("create was called");

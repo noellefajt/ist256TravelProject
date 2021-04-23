@@ -1,6 +1,8 @@
 var axios = require('axios').default;
 var express = require('express');
 var router = express.Router();
+const resCntl = require("../controllers/reservationController.js");
+const reservation = require("../model/reservationModel.js");
 
 //get/retrieve the reservation information based on the reservation name the user searches
 router.get('/', function (req, res, next) {
@@ -8,11 +10,13 @@ router.get('/', function (req, res, next) {
 });
 
 //creates the reservation and will add to the database
-router.post('/createRes', function (req, res, next) {
-    let data = req.body;
-     console.log(data);
-     res.redirect('/reservation.html');
-});
+// router.post('/createRes', function (req, res, next) {
+//     let data = req.body;
+//      console.log(data);
+//      res.redirect('/reservation.html');
+// });
+
+router.post('/createRes', resCntl.create);
 //update any criteria of an already existing reservation in the database
 router.put('/', function (req, res, next) {
     
