@@ -65,11 +65,11 @@
   
 
 table,td,tr {
-
   width: 35%;
-  border: 3px solid #4A4E69;
   margin: 20px;
   border-collapse: collapse;
+  border: 3px solid #4A4E69;
+ 
 }
 
 #lineTime{
@@ -78,7 +78,6 @@ table,td,tr {
 
 #lineStop{
   margin: 0;
-  
 }
 
 .border {
