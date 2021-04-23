@@ -3,6 +3,12 @@ $(document).ready(function(){
     console.log("Ready!");
     makeVinceRequest();
     makeJenRequest();
+    // $("#addButton").click(function(){
+    //     var str = $("#fname").val();
+    //     console.log(str);
+    //     console.log("hi");
+    // });
+    
 });
 
 function makeVinceRequest(){
@@ -65,6 +71,18 @@ function displayData(info){
 function addRes()
 {
     
+   
+   var fname = $("#fname").val();
+   var lname = $("#lname").val();
+   var date = $("#date").val();
+   var time = $("#time").val();
+   var activity = $("#activityType").val();
+    console.log(fname);
+    console.log(lname);
+    console.log(date);
+    console.log(time);
+    console.log(activity);
+    //console.log(fname);
     console.log("Reservation created!");
 }
 
@@ -76,6 +94,9 @@ function updateRes()
 function findRes()
 {
     console.log("Reservation found!");
+    //var fname = $("#fname").val();
+    var fname=$('input:text[name=fName]').val();
+    console.log(fname);
 }
 
 function deleteRes()

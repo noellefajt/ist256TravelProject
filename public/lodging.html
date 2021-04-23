@@ -9,7 +9,13 @@
     <meta name="keywords" content="IST 256, Reservations, Jennifer Hodsdon">
     <meta name="author" content="Jennifer Hodsdon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script 
+            src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+        </script>
     <script src="scripts/script.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
@@ -32,32 +38,33 @@
         </ul>
     </div>
 
-    <form method="POST" action = "/reservations/createRes">
-        <label for = "fname"> First Name: </label>
-        <input type = "text" name = "fname" required>
+    <!--<form method="POST" action = "/reservations/createRes">-->
+        <label for = "fname" > First Name: </label>
+        <input type = "text" id = "fname" >
         <label for = "lname"> Last Name: </label>
-        <input type = "text" name = "lname" required>
+        <input type = "text" id = "lname" >
         <br><br>
         <label for="date">Date: </label>
-        <input type = "date" name = "date" required>
+        <input type = "date" id = "date" >
         <label for="time">Time: </label>
-        <input type = "time" name = "time" required>
+        <input type = "time" id = "time" >
         <br><br>
         <label for="resOptions">What would you like to make a reservation for: </label>
-        <select name="activityType">
+        <select id="activityType">
+            <option disabled selected>Select an option</option>
             <option value = "activity">Activity</option>
             <option value = "lodging">Lodging</option>
             <option value = "restaurant">Restaurant</option>
             <option value = "transportation">Transportation</option>
             </select>
         <br><br>
-        <input type="submit" value="Submit">
+        <!--<input type="submit" value="Submit">-->
         <button id="addButton" onclick="addRes();">Make Reservation</button>
         <button id="updateButton" onclick="updateRes();">Update Reservation</button>
 
     </form>
     <br><br><br><br> 
-    <form method="GET" >
+    
        
         <p>Search for your reservation or delete your reservation</p>
         <label>Name of Reservation: </label><input id='findname'>
@@ -66,7 +73,7 @@
         <button id="findButton" onclick="findRes();">Get Reservation Details</button>
         <button id="deleteButton" onclick="deleteRes();">DELETE reservation</button>
         </select>
-    </form>
+    
     <!-- <div id="header">
         <h1>Reservations</h1>
         <!--This page will be implemented with our CRUD case. This is just a wireframe-->
