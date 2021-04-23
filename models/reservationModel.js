@@ -9,7 +9,7 @@
 // models/student.js
 const db = require("../db");
 
-const Reservation = db.model("ReservationModel", {
+const Reservation = db.model("Reservation", {
     fname:      String,
     lname:      String,
     date:       { type: Date, default: Date.now },
