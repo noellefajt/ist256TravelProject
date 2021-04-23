@@ -34,27 +34,27 @@ app.use('/activity', activityRouter)
 app.use('/location', locationRouter);
 app.use('/reservations',reservationsRouter);
 
-app.post("/create", function(req, res) {
+// app.post("/create", function(req, res) {
 
-    //copied from zybooks table 11.8.7
-    // Create a reservation from the submitted form data
-    const reserv = new Reservation({
-       fname: req.body.fname,
-       lname: req.body.lname,
-       date: new Date(req.body.date),
-       time: new Time(req.body.time),
-       activity: req.body.activity
-    });
+//     //copied from zybooks table 11.8.7
+//     // Create a reservation from the submitted form data
+//     const reserv = new Reservation({
+//        fname: req.body.fname,
+//        lname: req.body.lname,
+//        date: new Date(req.body.date),
+//        //time: new Time(req.body.time),
+//        activity: req.body.activity
+//     });
  
-    reserv.save(function(err, reserv) {
-       if (err) {
-          res.status(400).send(err);
-       } 
-       else {
-          res.send("reservation was saved.");
-       }
-    });
- });
+//     reserv.save(function(err, reserv) {
+//        if (err) {
+//           res.status(400).send(err);
+//        } 
+//        else {
+//           res.send("reservation was saved.");
+//        }
+//     });
+//  });
 
 
 module.exports = app;

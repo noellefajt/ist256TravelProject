@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
 router.post('/createRes', function (req, res, next) {
     let data = req.body;
      console.log(data);
-     res.redirect('/lodging.html');
+     res.redirect('/reservation.html');
 });
 //update any criteria of an already existing reservation in the database
 router.put('/', function (req, res, next) {

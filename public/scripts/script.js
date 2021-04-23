@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     console.log("Ready!");
     makeVinceRequest();
-    makeJenRequest();
+    //makeJenRequest();
     // $("#addButton").click(function(){
     //     var str = $("#fname").val();
     //     console.log(str);
@@ -84,6 +84,17 @@ function addRes()
     console.log(activity);
     //console.log(fname);
     console.log("Reservation created!");
+
+    $.ajax({
+        method:'POST',
+        url:'/createRes',
+        success: function(data) {    
+            console.log(data);
+        }
+    }).done(function(response){
+        console.log(response);
+        displayData(response);
+    });
 }
 
 function updateRes()

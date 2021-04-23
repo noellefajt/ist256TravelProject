@@ -1,10 +1,23 @@
+// //copied from class video
+// const { model } = require("mongoose");
 // const mongoose = require("../db");
 
-// const schema = new mongoose.Schema(
+// const ResSchema = new mongoose.Schema(
 //     {
-        
+//         fname: {
+//             desc: "first name",
+//             type: String,
+//             required: true,
+//         },
+//         lname: {
+//             desc: "last name",
+//             type: String,
+//             required: true,
+//         },
 //     }
 // )
+
+
 //copied from zybooks table 11.8.7
 // models/student.js
 const db = require("../db");
@@ -13,8 +26,9 @@ const Reservation = db.model("Reservation", {
     fname:      String,
     lname:      String,
     date:       { type: Date, default: Date.now },
-    time: { type: time },
+    //time: { type: time },
     activity: String
 });
 
 module.exports = Reservation;
+//model.exports = mongoose.model('Res', ResSchema);
