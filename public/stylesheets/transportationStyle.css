@@ -1,9 +1,8 @@
 
 
-
 /*all button styling adapted from:https://www.w3schools.com/howto/howto_css_search_button.asp*/
 .btn-panel button {
-  margin: 10px;
+  margin-bottom: 30px;
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
@@ -43,6 +42,7 @@
   display: inline-block;
   font-size: 16px;
 }
+
 #redButton {
   background-color: #e7453f; /* red */
   border: none;
@@ -55,18 +55,33 @@
 }
 
 
-#transportationImage {
+#linePhoto {
     max-height:150px;
     width:auto;
-    position:static;
-    float: left;
-    margin: 10px  15px 0 0;
+    margin-left: 10px;
+    padding: 10px;
 }
   
 
-
-#linePhoto{
-  margin-left: 15px;
+table,td,tr {
+  
+  width: 35%;
+  border: 3px solid #4A4E69;
+  margin: 20px;
+  border-collapse: collapse;
 }
 
+#lineTime{
+  margin: 0;
+}
 
+#lineStop{
+  margin: 0;
+  
+}
+
+.border {
+border-bottom : 1px solid  #4A4E69;
+padding:10px;
+margin: 0; 
+}
