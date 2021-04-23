@@ -156,8 +156,6 @@ function orangeClick() {
     orangeTime.innerHTML = null;
     orangeImg.innerHTML = null;
 
-    let table = document.getElementById("table");
-    table.
 
     data.subwayData.orangeLine.forEach(stop => {
         let p = document.createElement("p");
