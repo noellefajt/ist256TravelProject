@@ -58,13 +58,14 @@
 #linePhoto {
     max-height:150px;
     width:auto;
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
 }
   
 
 table,td,tr {
-  
+
   width: 35%;
   border: 3px solid #4A4E69;
   margin: 20px;
