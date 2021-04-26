@@ -36,7 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false })); // support encoded bodies
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/activity', activityRouter)
-app.use('/location', locationRouter);
+app.use('/locations', locationRouter);
 app.use('/reservations',reservationsRouter);
 
 // app.post("/create", function(req, res) {
