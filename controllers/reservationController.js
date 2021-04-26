@@ -6,7 +6,18 @@ exports.create = (req, res) => {
     //copied from class
 
     //validation
-    //if(!req.body.fname)
+    // if(!req.body.fullName || !req.body.date || !req.body.time || !req.body.activity){
+    //     console.log("hi");
+    //     return res.status(400).send({
+    //         message: "Required field must be filled out",
+    //     });
+    
+
+    // if(!req.body.fname || !req.body.lname || !req.body.date || !req.body.time || !req.body.activity){
+    //     return res.status(400).send({
+    //         message: "Required field must be filled out",
+    //     });
+    // }
 
 //     var fname = $("#fname").val();
 //    var lname = $("#lname").val();
@@ -15,8 +26,9 @@ exports.create = (req, res) => {
 //    var activity = $("#activityType").val();
     //make a reservation
 const reservation = new Reservation({
-    fname: req.body.fname,
-    lname: req.body.lname,
+    // fname: req.body.fname,
+    // lname: req.body.lname,
+    name: req.body.fullName,
     date: req.body.date,
     time: req.body.time,
     activity: req.body.activity,
@@ -26,7 +38,7 @@ const reservation = new Reservation({
     // time: time,
     // activity: activity
 });
-console.log(req.body.fname);
+console.log(req.body.fullName);
 console.log("new reservation" + reservation);
 
 //add to data base
@@ -43,4 +55,41 @@ reservation.save()
         message: err.message || "some error occured while creating reservation"
     });
 });
+};
+//read, get all reservations
+exports.getRes = (req,res) => {
+    Reservation.find()
+    .then((reservations) => {
+        console.log("getRes called");
+        res.status(200).send(reservations);
+    })
+    .catch((err) => {
+        res.status(500).send({
+            message: err.message || "error occured",
+        });
+    });
+};
+
+exports.delete = (req,res) => {
+    const fullName = req.params.fullName;
+   
+    console.log("Name to delete: " + fullName);
+
+    Reservation.findByIDAndRemove(fullName)
+    .then(data => {
+        if(!data){
+            res.status(404).send({
+                message: `Cannot delete Reservation with name=${fullName}. Name not found`
+            });
+        }else{
+            res.send({
+                message: "program was deleted successfully!"
+            });
+        }
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: "could not delete Reservation with name" + lname
+        });
+    });
 };

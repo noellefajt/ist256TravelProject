@@ -39,10 +39,12 @@
     </div>
 
     <!--<form method="POST" action = "/reservations/createRes">-->
-        <label for = "fname" > First Name: </label>
+        <!-- <label for = "fname" > First Name: </label>
         <input type = "text" id = "fname" >
         <label for = "lname"> Last Name: </label>
-        <input type = "text" id = "lname" >
+        <input type = "text" id = "lname" > -->
+        <label for = "fullName">Full name: </label>
+        <input type = "text" id = "fullName" >
         <br><br>
         <label for="date">Date: </label>
         <input type = "date" id = "date" >
@@ -58,21 +60,26 @@
             <option value = "transportation">Transportation</option>
             </select>
         <br><br>
-        <!--<input type="submit" value="Submit">-->
+  
         <button id="addButton" onclick="addRes();">Make Reservation</button>
         <button id="updateButton" onclick="updateRes();">Update Reservation</button>
 
     </form>
     <br><br><br><br> 
     
-       
+       <div>
         <p>Search for your reservation or delete your reservation</p>
         <label>Name of Reservation: </label><input id='findname'>
         <br><br>
         <br><br>
         <button id="findButton" onclick="findRes();">Get Reservation Details</button>
         <button id="deleteButton" onclick="deleteRes();">DELETE reservation</button>
-        </select>
+    </div>
+    <div>
+        <p id="resData">Here is the reservation data:</p>
+        <ul id="resList"></ul>
+    </div>
+
     
     <!-- <div id="header">
         <h1>Reservations</h1>
