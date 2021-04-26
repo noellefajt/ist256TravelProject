@@ -171,7 +171,7 @@ function orangeClick() {
         t.appendChild(tText);
         orangeTime.appendChild(t);
     })
-
+//create image
     let img = document.createElement("img");
     img.src = "images/subwaylineorange.png";
     orangeImg.appendChild(img);

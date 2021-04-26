@@ -44,14 +44,117 @@
             <br>
         </div>
 
-        <button class="linktabs" onclick="openTab('toDo', this, '#4a4e6950')"id="defaultOpen">Things to Do</button>
+        <button class="linktabs" onclick="openTab('toDo', this, '#4a4e6969')"id="defaultOpen">Things to Do</button>
         <button class="linktabs" onclick="openTab('food', this, '#9A8C98')" >Food and Drink</button>
         <button class="linktabs" onclick="openTab('weather', this, '#6a719e')">Weather</button>
 
         <div id="toDo" class="contenttabs">
-            <h2>Things to Do</h2>
-            <!--This page will be implemented with an API. This is just a wireframe-->
-            <p>This page will implement the BLC Landmark API in the next sprint.</p>
+            <h2>Landmarks in Boston</h2>
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <img src="images/arlington-image.jpg" id="foodImage">
+                    </td>
+                    <td>
+                        <h3>Arlington Street Church</h3>
+                        <p>
+                            Due to its geographic prominence and 
+                            the notable ministers who have served the congregation, the church is considered to be among the most historically important in American Unitarianism and Unitarian Universalism. 
+                            Completed in 1861, it was designed by Arthur Gilman and Gridley James Fox Bryant to resemble James Gibbs' St. Martin-in-the-Fields in London. The main sanctuary space has 16 
+                            large-scale stained-glass windows installed by Tiffany Studios from 1899 to 1929.
+                            On May 17, 2004, the Arlington Street Church was the site of the first state-sanctioned same-sex marriage in the United States.
+                        </p>
+                        <p>355 Boylston Street - <a href="http://bit.ly/1hxPmFI" id="landmarkLink">Study report</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/jamesblake-image.jpg" id="foodImage">
+                    </td>
+                    <td>
+                        <h3>James Blake House</h3>
+                        <p>
+                            The James Blake House is the oldest surviving house in Boston, Massachusetts, United States. The house was built in 1661 and the date was 
+                            confirmed by dendrochronology in 2007.[2] It is located at 735 Columbia Road, in Edward Everett Square, and just a block from Massachusetts Avenue. 
+                            The Dorchester Historical Society now owns the building and tours are given on the third Sunday of the month.
+                        </p>
+                        <p>210 East Cottage Street - <a href="http://bit.ly/1jYQY0u" id="landmarkLink">Study report</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/trustcomp-image.jpg" id="foodImage">
+                    </td>
+                    <td>
+                        <h3>International Trust Company</h3>
+                        <p>
+                            The nine-story masonry-clad building was built in 1892-93 to a design by William Gibbons Preston. 
+                            It is an early Boston example of the Beaux Arts style, and is structurally an early prototype of the use of skeleton framing. 
+                            It was enlarged in 1906, to a design by Woodbury & Leighton.[2] It was connected by internal connections to the adjacent Compton 
+                            Building in 1961, when the two buildings were under common ownership.
+                        </p>
+                        <p>45 Milk Street - <a href="http://bit.ly/PYzOF9" id="landmarkLink">Study report</a></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <img src="images/theodore-image.jpg" id="foodImage">
+                    </td>
+                    <td>
+                        <h3>Theodore Parker Unitarian Church</h3>
+                        <p>Built in 1900 to a design by West Roxbury native Henry M. Seaver, 
+                            it is a locally significant example of Normanesque architecture, and is adorned by stained glass windows created by Louis Comfort Tiffany and his firm. The church was listed on the National Register of Historic Places in 2020. 
+                            The congregation it houses was founded in 1712, and is named for the influential Transcendentalist and abolitionist Theodore Parker, who was the congregation's minister in the 1840s. 
+                        </p>
+                        <p>1851 Centre Street - <a href="http://bit.ly/1ipNCzj" id="landmarkLink">Study report</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/trinity-image.jpg" id="foodImage">
+                    </td>
+                    <td>
+                        <h3>Trinity Neighborhood House</h3>
+                        <p>
+                            The Trinity Neighborhood House is a historic brick townhouse at 406 Meridian Street located in the Eagle Hill section of East Boston, Massachusetts. 
+                            The house was built in 1847 for entrepreneur Noah Sturtevant and was thus named the Noah Sturtevant House. In 1917, it was named the Trinity Neighborhood House and Day Nursery. 
+                            Since 1888, it operated as a social service center and philanthropy of Trinity Church.[2]
+                        </p>
+                        
+                        <p>406 Meridian Street - <a href="http://bit.ly/1qkUDpi" id="landmarkLink">Study report</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/proctor-image.jpg" id="foodImage">
+                    </td>
+                    <td>
+                        <h3>Proctor Building</h3>
+                        <p>
+                            The Proctor Building, at the corner of Kingston and Bedford streets downtown, is many people’s favorite small commercial building in Boston – despite the gruesomely defaced condition in which it has long moldered.  
+                        </p>
+                        
+                        <p>100-6 Bedford Street - <a href="http://bit.ly/1qg9aVk" id="landmarkLink">Study report</a></p>
+                    </td>
+                </tr>
+            <!-- Sources:
+                https://en.wikipedia.org/wiki/Arlington_Street_Church
+                https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.bostonorganstudio.com%2Fpipe-organs-in-boston-2&psig=AOvVaw2XPtH7p2L51w8VOYIcLWAN&ust=1619556731708000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjy6ZDlnPACFQAAAAAdAAAAABAD
+                https://en.wikipedia.org/wiki/James_Blake_House
+                https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.bostonharborbeacon.com%2Fwp-content%2Fuploads%2F2014%2F03%2FDSC_2289.jpg&imgrefurl=http%3A%2F%2Fwww.bostonharborbeacon.com%2F2014%2F03%2F16%2Fhistoric-place-of-the-week-the-james-blake-house%2F&tbnid=O8vNndZe59jG0M&vet=12ahUKEwiE7dL25JzwAhWHDt8KHWbQCC4QMygFegUIARCtAQ..i&docid=nGjycUthv5Cb6M&w=3933&h=2755&q=james%20blake%20house&ved=2ahUKEwiE7dL25JzwAhWHDt8KHWbQCC4QMygFegUIARCtAQ
+                https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Ff%2Ffe%2FInternational_Trust_Company_Building_Entrance.jpg%2F200px-International_Trust_Company_Building_Entrance.jpg&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FInternational_Trust_Company_Building&tbnid=puiRgSgaUmBMEM&vet=12ahUKEwiHsdSx5JzwAhWIBd8KHcfCCTcQMygBegUIARC1AQ..i&docid=0aG_oX2UcV9jyM&w=200&h=150&q=international%20trust%20company%20building&ved=2ahUKEwiHsdSx5JzwAhWIBd8KHcfCCTcQMygBegUIARC1AQ
+                https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.geocaching.com%2Fwaymarking%2Fdisplay%2F7ab49f77-4948-45f0-a56a-558ff071584f.jpg&imgrefurl=https%3A%2F%2Fwww.waymarking.com%2Fwaymarks%2FWMH29P_Theodore_Parker_Unitarian_Universalist_Boston_MA&tbnid=yH1jL2ASa8ihiM&vet=12ahUKEwjOtOCk5JzwAhVXZ98KHY1xANQQMygCegUIARCnAQ..i&docid=-d6Je6iw4yY6MM&w=400&h=300&q=Theodore%20Parker%20Unitarian%20Church&ved=2ahUKEwjOtOCk5JzwAhVXZ98KHY1xANQQMygCegUIARCnAQ
+                https://en.wikipedia.org/wiki/Theodore_Parker_Unitarian_Universalist_Church
+                https://en.wikipedia.org/wiki/Trinity_Neighborhood_House
+                https://www.google.com/url?sa=i&url=https%3A%2F%2Fsah-archipedia.org%2Fbuildings%2FMA-01-EB9&psig=AOvVaw1SHdb18Un5EkGyHZQmqfZH&ust=1619556299014000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjPssHjnPACFQAAAAAdAAAAABAP
+                https://culturenow.org/entry&permalink=14169&seo=The-Proctor-Building_Peter-Vanderwarker_Boston-MA
+                https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AProctor_Building_-_100-106_Bedford_Street%2C_Boston%2C_MA_-_DSC05846.JPG&psig=AOvVaw0a44QJa9qQYc8jTHXb6ZTK&ust=1619556100360000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDVvuPinPACFQAAAAAdAAAAABAN
+            -->
+            </table>
         </div>
         <div id="food" class="contenttabs">
             <h2>Food and Drinks</h2>
