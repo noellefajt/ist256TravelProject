@@ -1,24 +1,17 @@
 //copied from class video
-const { model } = require("mongoose");
-// const mongoose = require("../db");
+/*const { model } = require("mongoose");*/
+const mongoose = require("../db");
 
 //all the commented out stuff is how he had in his video put gives me a 500 error
 // const ResSchema = new mongoose.Schema(
 //     {
-//         fname: {
-//             desc: "first name",
+//        
+//         name: {
+//             desc: "name",
 //             trim: true,
 //             type: String,
 //             index: true,
-//             unique: false,
-//             required: true,
-//         },
-//         lname: {
-//             desc: "last name",
-//             trim: true,
-//             type: String,
-//             index: true,
-//             unique: false,
+//             unique: true,
 //             required: true,
 //         },
 //         date: {
@@ -51,7 +44,7 @@ const { model } = require("mongoose");
 
 //copied from zybooks table 11.8.7
 // models/student.js
-const db = require("../db");
+/*const db = require("../db");
 
 const Reservation = db.model("Reservation", {
     fname:      String,
@@ -61,19 +54,21 @@ const Reservation = db.model("Reservation", {
     activity: String
 });
 
-module.exports = Reservation;
+module.exports = Reservation;*/
+
 //module.exports = mongoose.model("Res", ResSchema);
 
-// const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
-// const resSchema = mongoose.Schema({
-//     fname: String,
-//     lname: String,
-//     date: { type: Date, default: Date.now },
-//     time: String,
-//     activity: String
+const resSchema = new mongoose.Schema(
+    {
+    
+    name: String,
+    date: { type: Date, default: Date.now },
+    time: String,
+    activity: String
 
 
-// });
+});
 
-// module.exports = mongoose.model('res', resSchema);
+module.exports = mongoose.model("Reservation", resSchema);
