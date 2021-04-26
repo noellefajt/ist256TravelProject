@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
     console.log("Ready!");
-    makeVinceRequest();
-    //makeJenRequest();
+    makeJenRequest();
     // $("#addButton").click(function(){
     //     var str = $("#fname").val();
     //     console.log(str);
@@ -10,16 +9,6 @@ $(document).ready(function(){
     // });
     
 });
-
-function makeVinceRequest(){
-    $.ajax({
-        method:'GET',
-        url:'/activity',
-        success: (data) => {
-            console.log(data);
-        }
-    });
-}
 
 
 /*
@@ -34,12 +23,10 @@ function makeRequest(){
 }*/
 
 function makeJenRequest(){
+    console.log("making ajax request");
     $.ajax({
         method:'GET',
-        url:'/location',
-        success: function(data) {    
-            console.log(data);
-        }
+        url:'/locations',
     }).done(function(response){
         console.log(response);
         displayData(response);
@@ -51,8 +38,8 @@ function displayData(info){
     info.consolidated_weather.forEach(item => {
         let content = $('#content');
         
-        let h3 = $(`<h3>${item.applicable_date}</h3>`);
-        content.append(h3);
+        let h4 = $(`<h4>${item.applicable_date}</h4>`);
+        content.append(h4);
         
         let p = $(`<p>${"&nbsp;&nbsp;&nbsp;&nbsp;- Current Temperature: " + item.the_temp + "&#176;C"}</p>`);
         let p1 = $(`<p>${"&nbsp;&nbsp;&nbsp;&nbsp;- Maximum Temperature: " + item.max_temp + "&#176;C"}</p>`);
@@ -167,6 +154,6 @@ function deleteRes()
 }
 
 
-
         
+
 
