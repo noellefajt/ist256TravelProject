@@ -102,16 +102,25 @@ function findRes()
     // console.log(fname);
     $.ajax({
         method: 'GET',
-        url: '/reservations/findRes',
+        url: '/reservations',
         success: (data) => {
+            //console.log(data.message);
+            //var upData = JSON.parse(data);
+            console.log("Reservations: " + JSON.stringify(data));
             console.log(data);
-            console.log("Reservations: " + data);
             currentResList = data.slice();
             $("#resList").empty();
-            data.forEach(function (arrayItem){
-                var resItem = arrayItem.fullName;
-                console.log("array item name" + resItem);
-                $("#resList").append("<li>"+resItem+"<li>");
+            //data.toArray();
+            data.forEach(function (reserv){
+                console.log(reserv);
+                //var resItem = arrayItem.fullName;
+                //console.log(resItem);
+                //resItem = JSON.stringify(resItem);
+               // console.log("array item name" + resItem);
+                $("#resList").append("<li>"+reserv.name+"<li>");
+                $("#resList").append("<li>"+reserv.date+"<li>");
+                $("#resList").append("<li>"+reserv.time+"<li>");
+                $("#resList").append("<li>"+reserv.activity+"<li>");
             });
             
 
@@ -138,20 +147,43 @@ function findRes()
 //         }
 //     });
 // }
+// function updateRes(){
+//     var id = $("#id").val();
+    
+//     //mydb.reservations({_id:id}, {$name:$("#fullName").val()}, {$date:$("#date").val()},{$name:$("#time").val()},{$activity:$("#activity").val()});
+    
+   
+//     $.ajax({
+//         method: "PUT",
+//         url: '/' + id,
+//         //dataType: 'json',
+//         data:{
+//             fullName: $("#fullName").val(),
+//             date: $("#date").val(),
+//             time: $("#time").val(),
+//             activity: $("#activityType").val()
+//         }
+//     }).success(function(data){
+//         updateData.append("<p>Response: Data saved!</p>");
+//         console.log("Successful!" + data);
+//     }).fail(function(data){
+//         console.log("Oops not working" + data);
+//     });
+// };
 
-function deleteRes()
-{
-    var nameToDelete = $("#fullName").val();
-    $.ajax({
-        method: 'DELETE',
-        url: '/reservations/deleteRes/' + nameToDelete
-    }).done(function(data){
-        console.log("Your reservation has been deleted");
-    }).fail(function(jqXHR){
-        $("#error").html("The reservation could not be delted")
-    });
+// function deleteRes()
+// {
+//     var nameToDelete = $("#fullName").val();
+//     $.ajax({
+//         method: 'DELETE',
+//         url: '/reservations/' + nameToDelete
+//     }).done(function(data){
+//         console.log("Your reservation has been deleted");
+//     }).fail(function(jqXHR){
+//         $("#error").html("The reservation could not be delted")
+//     });
 
-}
+// }
 
 
         

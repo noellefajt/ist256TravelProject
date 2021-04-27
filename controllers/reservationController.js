@@ -57,7 +57,9 @@ reservation.save()
 });
 };
 //read, get all reservations
+
 exports.getRes = (req,res) => {
+    //mydb.Reservation.find({"_id":id})
     Reservation.find()
     .then((reservations) => {
         console.log("getRes called");
@@ -70,26 +72,41 @@ exports.getRes = (req,res) => {
     });
 };
 
-exports.delete = (req,res) => {
-    const fullName = req.params.fullName;
-   
-    console.log("Name to delete: " + fullName);
+// exports.update = (req,res) =>{
 
-    Reservation.findByIDAndRemove(fullName)
-    .then(data => {
-        if(!data){
-            res.status(404).send({
-                message: `Cannot delete Reservation with name=${fullName}. Name not found`
-            });
-        }else{
-            res.send({
-                message: "program was deleted successfully!"
-            });
-        }
-    })
-    .catch(err => {
-        res.status(500).send({
-            message: "could not delete Reservation with name" + lname
-        });
-    });
-};
+//     var fullName= req.body.fullName;
+//     var date = req.body.date;
+//     var time = req.body.time;
+//     var activity = req.body.activity;
+//     Reservation.findByIdAndUpdate({_id: req.params.id}, { $set: { "fullName": fullName, "date": date,  "time": time,"activity": activity}}, function (err, result) {
+//         if (err) {
+//             res.send("Error" + err);
+//         } else {
+//             // res.redirect("/profile/" + req.params.id);
+//             res.send("From router Put: Worked!");
+//         }
+// });
+// }
+// exports.delete = (req,res) => {
+//     const fullName = req.params.fullName;
+   
+//     console.log("Name to delete: " + fullName);
+
+//     Reservation.findByIDAndRemove(fullName)
+//     .then(data => {
+//         if(!data){
+//             res.status(404).send({
+//                 message: `Cannot delete Reservation with name=${fullName}. Name not found`
+//             });
+//         }else{
+//             res.send({
+//                 message: "program was deleted successfully!"
+//             });
+//         }
+//     })
+//     .catch(err => {
+//         res.status(500).send({
+//             message: "could not delete Reservation with name" + lname
+//         });
+//     });
+// };
