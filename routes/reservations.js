@@ -8,7 +8,7 @@ const reservation = require("../models/reservationModel.js");
 // router.get('/', function (req, res, next) {
 //     let query = req.query;
 // });
-router.get('/findRes', resCntl.getRes);
+router.get('/', resCntl.getRes);
    
 
 //creates the reservation and will add to the database
@@ -20,12 +20,10 @@ router.get('/findRes', resCntl.getRes);
 
 router.post('/createRes', resCntl.create);
 //update any criteria of an already existing reservation in the database
-router.put('/', function (req, res, next) {
-    
-});
+//router.put('/:_id', resCntl.updateRes);
 
 //deletes any reservation that is in the database using the reservation name
-router.delete('/deleteRes/:fullName', resCntl.delete);
+//router.delete('/:_id', resCntl.delete);
     
 
 
