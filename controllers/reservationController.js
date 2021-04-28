@@ -3,40 +3,22 @@ const Reservation = require("../models/reservationModel");
 exports.create = (req, res) => {
     console.log("create was called");
 
-    //copied from class
+    //code copied and adapted from class
 
     //validation
-    // if(!req.body.fullName || !req.body.date || !req.body.time || !req.body.activity){
-    //     console.log("hi");
-    //     return res.status(400).send({
-    //         message: "Required field must be filled out",
-    //     });
+    if(!req.body.fullName || !req.body.date || !req.body.time || !req.body.activity){
+        console.log("hi");
+        return res.status(400).send({
+            message: "Required field must be filled out",
+        });
+    }
     
-
-    // if(!req.body.fname || !req.body.lname || !req.body.date || !req.body.time || !req.body.activity){
-    //     return res.status(400).send({
-    //         message: "Required field must be filled out",
-    //     });
-    // }
-
-//     var fname = $("#fname").val();
-//    var lname = $("#lname").val();
-//    var date = $("#date").val();
-//    var time = $("#time").val();
-//    var activity = $("#activityType").val();
-    //make a reservation
+ 
 const reservation = new Reservation({
-    // fname: req.body.fname,
-    // lname: req.body.lname,
     name: req.body.fullName,
     date: req.body.date,
     time: req.body.time,
     activity: req.body.activity,
-    // fname: fname,
-    // lname: lname,
-    // date: date,
-    // time: time,
-    // activity: activity
 });
 console.log(req.body.fullName);
 console.log("new reservation" + reservation);
@@ -47,7 +29,6 @@ reservation.save()
     res.send(data);
     console.log("response data: " + data);
     console.log("hi");
-    //res.status(200).redirect('/reservation.html');
 
 })
 .catch((err) => {
@@ -56,11 +37,13 @@ reservation.save()
     });
 });
 };
-//read, get all reservations
+
 
 exports.getRes = (req,res) => {
-    //mydb.Reservation.find({"_id":id})
-    Reservation.find()
+    const id = req.params._id;
+    console.log(req);
+    Reservation.findById(id)
+   
     .then((reservations) => {
         console.log("getRes called");
         res.status(200).send(reservations);
@@ -72,41 +55,65 @@ exports.getRes = (req,res) => {
     });
 };
 
-// exports.update = (req,res) =>{
 
-//     var fullName= req.body.fullName;
-//     var date = req.body.date;
-//     var time = req.body.time;
-//     var activity = req.body.activity;
-//     Reservation.findByIdAndUpdate({_id: req.params.id}, { $set: { "fullName": fullName, "date": date,  "time": time,"activity": activity}}, function (err, result) {
-//         if (err) {
-//             res.send("Error" + err);
-//         } else {
-//             // res.redirect("/profile/" + req.params.id);
-//             res.send("From router Put: Worked!");
-//         }
-// });
-// }
-// exports.delete = (req,res) => {
-//     const fullName = req.params.fullName;
-   
-//     console.log("Name to delete: " + fullName);
+exports.update = (req,res) =>{
+    var id = req.params._id;
+    var fullNameU= req.body.name;
+    var dateU = req.body.date;
+    var timeU = req.body.time;
+    var activityU = req.body.activity;
+    console.log(id);
+    console.log(fullNameU);
+    console.log(dateU);
+    console.log(timeU);
+    console.log(activityU);
+    Reservation.findById(id);
+    console.log(Reservation);
 
-//     Reservation.findByIDAndRemove(fullName)
-//     .then(data => {
-//         if(!data){
-//             res.status(404).send({
-//                 message: `Cannot delete Reservation with name=${fullName}. Name not found`
-//             });
-//         }else{
-//             res.send({
-//                 message: "program was deleted successfully!"
-//             });
-//         }
-//     })
-//     .catch(err => {
-//         res.status(500).send({
-//             message: "could not delete Reservation with name" + lname
-//         });
-//     });
-// };
+   //https://www.codota.com/code/javascript/functions/mongoose/Model/findByIdAndUpdate
+   //code adapted from here for finding and updating the customer information
+    Reservation.findByIdAndUpdate(req.params._id, req.body)
+    //code adapted from https://stackoverflow.com/questions/55152813/how-to-update-mongodb-data-with-jquery-ajax 
+    //Reservation.findByIdAndUpdate({_id:id}, { $set: { name: fullNameU, date: dateU,  time: timeU,activity: activityU}})
+    .then(data => {
+        if(!data){
+            res.status(404).send({
+                message: `Cannot update Reservation with id=${id}. ID not found`
+            });
+        }else{
+            res.send({
+                message: "Reservation was updated!"
+            });
+            
+        }
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: "could not update Reservation with id" + id
+        });
+    });
+};
+exports.delete = (req,res) => {
+    //const id = req.body.id;
+    console.log("hey");
+    const id = req.params._id;
+    console.log("Id to delete: " + id);
+    Reservation.findByIdAndDelete(id)
+    .then(data => {
+        if(!data){
+            res.status(404).send({
+                message: `Cannot delete Reservation with id=${id}. ID not found`
+            });
+        }else{
+            res.send({
+                message: "Reservation was deleted successfully!"
+            });
+            
+        }
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: "could not delete Reservation with id" + id
+        });
+    });
+};
