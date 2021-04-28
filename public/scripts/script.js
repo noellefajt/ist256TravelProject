@@ -39,6 +39,9 @@ function displayData(info) {
 
     });
 }
+
+
+//Code adapted from in class demo (April 20)
 var currentResList;
 function addRes() {
     var fullName = $("#fullName").val();

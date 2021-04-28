@@ -3,7 +3,7 @@ const Reservation = require("../models/reservationModel");
 exports.create = (req, res) => {
     console.log("create was called");
 
-    //code copied and adapted from class
+    //There is code copied and adapted from Ryan's class demos (April 20)
 
     //validation
     if(!req.body.fullName || !req.body.date || !req.body.time || !req.body.activity){
@@ -73,8 +73,6 @@ exports.update = (req,res) =>{
    //https://www.codota.com/code/javascript/functions/mongoose/Model/findByIdAndUpdate
    //code adapted from here for finding and updating the customer information
     Reservation.findByIdAndUpdate(req.params._id, req.body)
-    //code adapted from https://stackoverflow.com/questions/55152813/how-to-update-mongodb-data-with-jquery-ajax 
-    //Reservation.findByIdAndUpdate({_id:id}, { $set: { name: fullNameU, date: dateU,  time: timeU,activity: activityU}})
     .then(data => {
         if(!data){
             res.status(404).send({
