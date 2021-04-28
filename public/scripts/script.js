@@ -166,7 +166,7 @@ function deleteRes() {
         $("#time").val("");
         $("#activity").val("selected");
     }).fail(function (jqXHR) {
-        $("#error").html("The reservation could not be delted")
+        $("#error").html("The reservation could not be deleted")
     });
 
 }
