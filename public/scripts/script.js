@@ -66,13 +66,13 @@ function addRes() {
         console.log(response);
         $("#confirmation").empty();
         $("#confirmationCode").empty();
-        $("#confirmation").append("Please keep your reservation ID for the future you will need it to access reservations details, update or delete your reservations ");
+        $("#confirmation").append("<b>Please keep your reservation ID for the future you will need it to access reservations details, update or delete your reservations.</b> ");
         $("#confirmationCode").append("Reservation ID: " + response._id);
         $("#resList").append("Your reservation information:");
-        $("#resList").append("<li> name: " + response.name + "</li>");
-        $("#resList").append("<li> date: " + response.date + "</li>");
-        $("#resList").append("<li> time: " + response.time + "</li>");
-        $("#resList").append("<li> activity: " + response.activity + "</li>");
+        $("#resList").append("<li> Name: " + response.name + "</li>");
+        $("#resList").append("<li> Date: " + response.date + "</li>");
+        $("#resList").append("<li> Time: " + response.time + "</li>");
+        $("#resList").append("<li> Activity: " + response.activity + "</li>");
         $("#fullName").val("");
         $("#date").val("");
         $("#time").val("");
@@ -91,21 +91,21 @@ function findRes() {
         console.log(data);
         var reserv = JSON.parse(JSON.stringify(data));
 
-        console.log("Your reservation has been found");
+        console.log("Your reservation has been found.");
         $("#resList").empty();
         $("#confirmation").empty();
         $("#confirmationCode").empty();
         $("#resList").append("Your reservation information:");
-        $("#resList").append("<li> name: " + reserv.name + "</li>");
-        $("#resList").append("<li> date: " + reserv.date + "</li>");
-        $("#resList").append("<li> time: " + reserv.time + "</li>");
-        $("#resList").append("<li> activity: " + reserv.activity + "</li>");
+        $("#resList").append("<li> Name: " + reserv.name + "</li>");
+        $("#resList").append("<li> Date: " + reserv.date + "</li>");
+        $("#resList").append("<li> Time: " + reserv.time + "</li>");
+        $("#resList").append("<li> Activity: " + reserv.activity + "</li>");
         $("#fullName").val(reserv.name);
         $("#date").val(reserv.date);
         $("#time").val(reserv.time);
         $("#activity").val(reserv.activity);
     }).fail(function (jqXHR) {
-        $("#error").html("The reservation could not be found")
+        $("#error").html("The reservation could not be found.")
     });
 
 }
@@ -132,18 +132,18 @@ function updateRes() {
     }).done(function (response) {
         console.log(response);
         console.log("hi update");
-        console.log("Your reservation has been updated");
+        console.log("Your reservation has been updated.");
         $("#confirmation").empty();
         $("#confirmationCode").empty();
         $("#resList").empty();
         $("#resList").append("Your reservation has been updated for id:" + idToUpdate);
-        $("#resList").append("<li> name: " + fullName + "</li>");
-        $("#resList").append("<li> date: " + date + "</li>");
-        $("#resList").append("<li> time: " + time + "</li>");
-        $("#resList").append("<li> activity: " + activity + "</li>");
+        $("#resList").append("<li> Name: " + fullName + "</li>");
+        $("#resList").append("<li> Date: " + date + "</li>");
+        $("#resList").append("<li> Time: " + time + "</li>");
+        $("#resList").append("<li> Activity: " + activity + "</li>");
 
     }).fail(function (jqXHR) {
-        $("#error").html("The reservation could not be updated")
+        $("#error").html("The reservation could not be updated.")
     });
 
 }
@@ -156,7 +156,7 @@ function deleteRes() {
         url: '/reservations/' + idToDelete
     }).done(function (data) {
         console.log(idToDelete);
-        console.log("Your reservation has been deleted");
+        console.log("Your reservation has been deleted.");
         $("#confirmation").empty();
         $("#confirmationCode").empty();
         $("#resList").empty();
@@ -166,7 +166,7 @@ function deleteRes() {
         $("#time").val("");
         $("#activity").val("selected");
     }).fail(function (jqXHR) {
-        $("#error").html("The reservation could not be deleted")
+        $("#error").html("The reservation could not be deleted.")
     });
 
 }
