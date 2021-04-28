@@ -5,7 +5,7 @@ const resCntl = require("../controllers/reservationController.js");
 const reservation = require("../models/reservationModel.js");
 
 //get/retrieve the reservation information based on the reservation name the user searches
-router.get('/:_id', resCntl.getRes);
+router.get('/:_id', resCntl.getRes);        
    
 //creates a new reservation
 router.post('/createRes', resCntl.create);
@@ -14,6 +14,6 @@ router.post('/createRes', resCntl.create);
 router.put('/:_id', resCntl.update);
 
 //deletes any reservation that is in the database using the reservation name
-router.delete('/:_id', resCntl.delete);
+router.delete('/:_id', resCntl.delete);     //adapted from in class (April 20)
     
 module.exports = router;

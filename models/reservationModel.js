@@ -1,4 +1,4 @@
-//adaoted from class videos
+//Adapted from inclass demos (April 20 and April 15)
 
 const mongoose = require("../db");
 

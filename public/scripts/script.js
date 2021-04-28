@@ -39,6 +39,9 @@ function displayData(info) {
 
     });
 }
+
+
+//Code adapted from in class demo (April 20)
 var currentResList;
 function addRes() {
     var fullName = $("#fullName").val();
@@ -163,7 +166,7 @@ function deleteRes() {
         $("#time").val("");
         $("#activity").val("selected");
     }).fail(function (jqXHR) {
-        $("#error").html("The reservation could not be delted")
+        $("#error").html("The reservation could not be deleted")
     });
 
 }
