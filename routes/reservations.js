@@ -5,26 +5,15 @@ const resCntl = require("../controllers/reservationController.js");
 const reservation = require("../models/reservationModel.js");
 
 //get/retrieve the reservation information based on the reservation name the user searches
-// router.get('/', function (req, res, next) {
-//     let query = req.query;
-// });
-router.get('/', resCntl.getRes);
+router.get('/:_id', resCntl.getRes);
    
-
-//creates the reservation and will add to the database
-// router.post('/createRes', function (req, res, next) {
-//     let data = req.body;
-//      console.log(data);
-//      res.redirect('/reservation.html');
-// });
-
+//creates a new reservation
 router.post('/createRes', resCntl.create);
+
 //update any criteria of an already existing reservation in the database
-//router.put('/:_id', resCntl.updateRes);
+router.put('/:_id', resCntl.update);
 
 //deletes any reservation that is in the database using the reservation name
-//router.delete('/:_id', resCntl.delete);
+router.delete('/:_id', resCntl.delete);
     
-
-
 module.exports = router;

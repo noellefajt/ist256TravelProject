@@ -41,12 +41,6 @@
     </div>
     
     </div>
-
-    <!--<form method="POST" action = "/reservations/createRes">-->
-        <!-- <label for = "fname" > First Name: </label>
-        <input type = "text" id = "fname" >
-        <label for = "lname"> Last Name: </label>
-        <input type = "text" id = "lname" > -->
         <label for = "fullName">Full name: </label>
         <input type = "text" id = "fullName" >
         <br><br>
@@ -56,8 +50,8 @@
         <input type = "time" id = "time" >
         <br><br>
         <label for="resOptions">What would you like to make a reservation for: </label>
-        <select id="activityType">
-            <option disabled selected>Select an option</option>
+        <select id="activity">
+            <option value = "select" disabled selected>Select an option</option>
             <option value = "activity">Activity</option>
             <option value = "lodging">Lodging</option>
             <option value = "restaurant">Restaurant</option>
@@ -67,55 +61,24 @@
   
         <button id="addButton" onclick="addRes();">Make Reservation</button>
         <button id="updateButton" onclick="updateRes();">Update Reservation</button>
-
-    </form>
-    <br><br><br><br> 
-    
+        <br><br>
+           
+        <label id="confirmation"></label>
+        <p id="confirmationCode"></p>
+    <br>
        <div>
-        <p>Search for your reservation or delete your reservation</p>
+        <p>Please enter reservation ID to get reservation details or delete your reservation</p>
         <label>Reservation ID: </label><input id='id'>
         <br><br>
-        <br><br>
+        
         <button id="findButton" onclick="findRes();">Get Reservation Details</button>
         <button id="deleteButton" onclick="deleteRes();">DELETE reservation</button>
     </div>
     <div>
-        <p id="resData">Here is the reservation data:</p>
         <ul id="resList"></ul>
     </div>
 
-    
-    <!-- <div id="header">
-        <h1>Reservations</h1>
-        <!--This page will be implemented with our CRUD case. This is just a wireframe-->
-        <!-- <p>You can create or make changes to your reservation here</p>
-        <label>Name of Reservation: </label><input id='name'>
-        <br><br>
-        <label>Date: </label><input id='date'>
-        <br><br>
-        <label>Time: </label><input id='time'>
-        <br><br>
-        <label>What would you like to make a reservation for: </label><select id='type'>
-            <option value = "activity">Activity</option>
-            <option value = "lodging">Lodging</option>
-            <option value = "restaurant">Restaurant</option>
-            <option value = "transportation">Transportation</option>
-        </select>
-        <br><br>
-        <!--this will be autofilled based on the users above selection-->
-        <!-- <label>Select an option: </label><select id='type'></select>
-        <br><br>
-        <button id="addButton" onclick="addRes();">Make Reservation</button>
-        <button id="updateButton" onclick="updateRes();">Update Reservation</button>
-        <br><br><br><br> 
-        <p>Search for your reservation or delete your reservation</p>
-        <label>Name of Reservation: </label><input id='findname'>
-        <br><br>
-        <br><br>
-        <button id="findButton" onclick="findRes();">Get Reservation Details</button>
-        <button id="deleteButton" onclick="deleteRes();">DELETE reservation</button>
-        
-    </div> --> 
+
 </body>
 
 </html>
